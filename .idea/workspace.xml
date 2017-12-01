@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33427692-08fa-4b37-9e0c-565934cb223f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/group/selectbyUser.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word/selectByGroup.php" afterPath="$PROJECT_DIR$/word/selectByGroup.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/word/selectByUser.php" afterPath="$PROJECT_DIR$/group/selectByUser.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,19 +36,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selectByGroup.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="selectByGroup.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/word/selectByGroup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state relative-caret-position="352">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
-                <marker date="1512136534399" expanded="true" signature="346:410" ph="select * fro... word_group" />
+                <marker date="1512136814504" expanded="true" signature="346:421" ph="select * fro... word_group" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selectByUser.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="selectByUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/group/selectByUser.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="404">
@@ -107,8 +105,8 @@
         <option value="$PROJECT_DIR$/select/selectByGroupId.php" />
         <option value="$PROJECT_DIR$/select/selectByUserId.php" />
         <option value="$PROJECT_DIR$/select/selectWordByUserId.php" />
-        <option value="$PROJECT_DIR$/word/selectByGroup.php" />
         <option value="$PROJECT_DIR$/word/selectByUser.php" />
+        <option value="$PROJECT_DIR$/word/selectByGroup.php" />
       </list>
     </option>
   </component>
@@ -241,7 +239,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512121353319</updated>
-      <workItem from="1512121355181" duration="15302000" />
+      <workItem from="1512121355181" duration="15458000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1512127052609</created>
@@ -324,7 +322,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15302000" />
+    <option name="totallyTimeSpent" value="15458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -451,22 +449,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/word/selectByGroup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <marker date="1512136534399" expanded="true" signature="346:410" ph="select * fro... word_group" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/group/selectByUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
           <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
           <folding>
             <marker date="1512136629898" expanded="true" signature="352:410" ph="select word_... word_has_group" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/word/selectByGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <marker date="1512136814504" expanded="true" signature="346:421" ph="select * fro... word_group" />
           </folding>
         </state>
       </provider>

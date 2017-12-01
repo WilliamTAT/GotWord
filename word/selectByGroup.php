@@ -20,7 +20,7 @@ function selectByWordGroupId($word_group_id) {
     }
 
 
-    $mysqli_result = mysqli_query($conn, "select word_word from word_has_group where id = '$word_group_id' ");
+    $mysqli_result = mysqli_query($conn, "select word_word from word_has_group where word_group_id = '$word_group_id' ");
 //    $mysqli_result = $conn -> query("select * from word_group where word_group_id = '$word_group_id'");
     if ($mysqli_result) {
         $array = array();
