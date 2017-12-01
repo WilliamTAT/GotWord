@@ -25,11 +25,9 @@ function selectByUserId($user_id) {
             where word_group_id = 
     		any (select id from word_group where user_id = '$user_id');");
 
-    echo count($mysqli_result);
-
     if ($mysqli_result) {
         $array = array();
-        while($row = mysqli_fetch_array($mysqli_result, MYSQLI_ASSOC)) {
+        while($row = mysqli_fetch_row($mysqli_result)) {
             $array[] = $row;
         }
         $GLOBALS['response']['length'] = count($array);
