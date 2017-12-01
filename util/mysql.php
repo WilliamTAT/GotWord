@@ -12,6 +12,10 @@ function getConn() {
     return $conn;
 }
 
+function e_log($msg) {
+    error_log($msg.'\n', 3, 'log.txt');
+}
+
 //$conn = getConn();
 //$result = mysqli_query($conn, "select * from user");
 //
@@ -20,6 +24,6 @@ function getConn() {
 //    echo '<br>';
 //}
 
-echo 'mysql connect success<br><br>';
+e_log('mysql connect success<br><br>');
 
 ?>

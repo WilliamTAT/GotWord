@@ -22,16 +22,16 @@ function insertWord($word, $explains, $all = '') {
     mysqli_close($conn);
 }
 
-function insertWordToGroup($word, $group) {
+function insertWordToword_group($word, $word_group) {
     $conn = getConn();
 
     if (!$conn) {
         die('不能连接Mysql');
     }
 
-    $mysqli_result = mysqli_query($conn, "insert into word_has_group(word_word, word_group_id) VALUES ('$word', (select id from db_got_word.group where name = '$group'))");
+    $mysqli_result = mysqli_query($conn, "insert into word_has_word_group(word_word, word_word_group_id) VALUES ('$word', (select id from db_got_word.word_group where name = '$word_group'))");
     if (!$mysqli_result) {
-        echo '插入'.$word.' to '.$group.' 失败<br>';
+        echo '插入'.$word.' to '.$word_group.' 失败<br>';
     }
     mysqli_close($conn);
 }
@@ -52,13 +52,13 @@ function selectWord($word) {
     return $mysqli_fetch_row;
 }
 
-$group = $_POST['group'] ;
+$word_group = $_POST['word_group'] ;
 $word = $_POST['word'];
 $explains = $_POST['explains'];
 $text = $_POST['text'];
 
 
-echo '$group: '.$group;
+echo '$word_group: '.$word_group;
 echo '<br>';
 echo '$word: '.$word;
 echo '<br>';
@@ -71,8 +71,8 @@ if ($word) {
     if (!selectWord($word)) {
         insertWord($word, $explains, $text);
     }
-    if ($group) {
-        insertWordToGroup($word, $group);
+    if ($word_group) {
+        insertWordToword_group($word, $word_group);
     }
 }
 
