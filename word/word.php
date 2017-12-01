@@ -17,7 +17,7 @@ function insertWord($word, $explains, $all = '') {
     }
     $mysqli_result = mysqli_query($conn, "insert into word(word, explains, text) VALUES ('$word', '$explains', '$all')");
     if (!$mysqli_result) {
-        echo '插入失败<br>';
+        echo '插入'.$word.'失败<br>';
     }
     mysqli_close($conn);
 }
@@ -31,7 +31,7 @@ function insertWordToGroup($word, $group) {
 
     $mysqli_result = mysqli_query($conn, "insert into word_has_group(word_word, word_group_id) VALUES ('$word', '$group')");
     if (!$mysqli_result) {
-        echo '插入失败<br>';
+        echo '插入'.$word.' to '.$group.' 失败<br>';
     }
     mysqli_close($conn);
 }
@@ -46,7 +46,7 @@ function selectWord($word) {
     $mysqli_result = mysqli_query($conn, "select * from word where word = '$word'");
     $mysqli_fetch_row = mysqli_fetch_row($mysqli_result);
     if ($mysqli_fetch_row) {
-        echo $word.'  无结果<br>';
+        echo '查询-'.$word.'-无结果<br>';
     }
     mysqli_close($conn);
     return $mysqli_fetch_row;
@@ -56,6 +56,11 @@ $group = $_POST['group'];
 $word = $_POST['word'];
 $explains = $_POST['explains'];
 $text = $_POST['text'];
+
+echo '$group: '.$group;
+echo '$word: '.$word;
+echo '$explains: '.$explains;
+echo '$text: '.$text;
 
 if ($word) {
     if (!selectWord($word)) {
