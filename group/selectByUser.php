@@ -21,7 +21,11 @@ function selectByUserId($user_id) {
         die('不能连接Mysql');
     }
     
-    $mysqli_result = mysqli_query($conn, "select id, name from word_group where user_id = '$user_id';");
+    $mysqli_result = mysqli_query($conn, "select word_group.id, word_group.name, count(word_has_group.word_word) 
+			from word_group, word_has_group 
+            where user_id = '$user_id' 
+			and word_has_group.word_group_id = word_group.id;
+    ");
 
     if ($mysqli_result) {
         $array = array();
