@@ -23,7 +23,10 @@ function selectByWordGroupId($word_group_id) {
     $mysqli_result = mysqli_query($conn, "select * from word_group where id = '$word_group_id' ");
 //    $mysqli_result = $conn -> query("select * from word_group where word_group_id = '$word_group_id'");
     if ($mysqli_result) {
-        $array = mysqli_fetch_array($mysqli_result, MYSQLI_ASSOC);
+        $array = array();
+        while($row = mysqli_fetch_assoc($mysqli_result)) {
+            $array[] = $row;
+        }
         $GLOBALS['response']['length'] = count($array);
         mysqli_close($conn);
         return $array;
@@ -42,7 +45,6 @@ if ($word_group_id) {
 }
 
 echo json_encode($response);
-echo '================='
 
 ?>
 

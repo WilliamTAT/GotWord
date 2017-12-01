@@ -8,6 +8,8 @@
 
 require '../util/mysql.php';
 
+$response = array();
+
 /**
  * @param $user_id
  * @return mixed 结果数组
@@ -26,7 +28,10 @@ function selectByUserId($user_id) {
     echo count($mysqli_result);
 
     if ($mysqli_result) {
-        $array = mysqli_fetch_array($mysqli_result, MYSQLI_ASSOC);
+        $array = array();
+        while($row = mysqli_fetch_array($mysqli_result, MYSQLI_ASSOC)) {
+            $array[] = $row;
+        }
         $GLOBALS['response']['length'] = count($array);
         mysqli_close($conn);
         return $array;

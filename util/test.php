@@ -23,6 +23,12 @@ $conn = mysqli_connect('123.207.244.139', 'ning', 'ninggc');
 mysqli_select_db($conn, 'db_got_word');
 $mysqli_result = mysqli_query($conn, $s);
 //echo mysqli_error($conn);
-echo json_encode(mysqli_fetch_array($mysqli_result));
+$arr = array();
+while ($row = mysqli_fetch_assoc($mysqli_result)) {
+    $arr[] = $row;
+}
+
+echo json_encode($arr);
+
 
 ?>
