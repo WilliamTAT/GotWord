@@ -19,6 +19,7 @@ function selectByWordGroupId($word_group_id) {
         die('不能连接Mysql');
     }
 
+
     $mysqli_result = mysqli_query($conn, "select * from word_group where id = '$word_group_id' ");
 //    $mysqli_result = $conn -> query("select * from word_group where word_group_id = '$word_group_id'");
     if ($mysqli_result) {
@@ -34,12 +35,14 @@ function selectByWordGroupId($word_group_id) {
 $word_group_id = $_POST['word_group_id'];
 e_log('word_group_id: '.$word_group_id.'<br>');
 
+
 if ($word_group_id) {
     $result = selectByWordGroupId($word_group_id);
     $response['data'] = $result;
 }
 
 echo json_encode($response);
+echo '================='
 
 ?>
 

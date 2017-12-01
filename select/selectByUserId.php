@@ -21,7 +21,10 @@ function selectByUserId($user_id) {
     
     $mysqli_result = mysqli_query($conn, "select word_word from word_has_group 
             where word_group_id = 
-    		any(select id from word_group where user_id = '$user_id');");
+    		any (select id from word_group where user_id = '$user_id');");
+
+    echo count($mysqli_result);
+
     if ($mysqli_result) {
         $array = mysqli_fetch_array($mysqli_result, MYSQLI_ASSOC);
         $GLOBALS['response']['length'] = count($array);

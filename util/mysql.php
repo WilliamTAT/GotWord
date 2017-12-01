@@ -24,6 +24,6 @@ function e_log($msg) {
 //    echo '<br>';
 //}
 
-e_log('mysql connect success<br><br>');
+
 
 ?>
