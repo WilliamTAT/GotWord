@@ -53,19 +53,19 @@ function selectWord($word) {
 }
 
 $group = $_POST['group'] ;
-echo '<br>';
 $word = $_POST['word'];
-echo '<br>';
 $explains = $_POST['explains'];
-echo '<br>';
 $text = $_POST['text'];
-echo '<br>';
 
 
 echo '$group: '.$group;
+echo '<br>';
 echo '$word: '.$word;
+echo '<br>';
 echo '$explains: '.$explains;
+echo '<br>';
 echo '$text: '.$text;
+echo '<br>';
 
 if ($word) {
     if (!selectWord($word)) {
