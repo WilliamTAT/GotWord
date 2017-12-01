@@ -7,7 +7,7 @@ git commit -m "update"
 echo;
 echo ============ commit end ============
 echo;
-git push origin
+git push
 echo;
 echo ============ push end ============
 echo;
