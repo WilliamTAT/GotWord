@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="db_got_word@123.207.244.139">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="db_got_word">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="db_classroom"/>
+    <schema id="4" parent="1" name="db_home"/>
+    <schema id="5" parent="1" name="db_h_test"/>
+    <schema id="6" parent="1" name="db_progress"/>
+    <schema id="7" parent="1" name="db_trade"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="test"/>
+    <schema id="10" parent="1" name="trade"/>
+    <schema id="11" parent="1" name="wordpress"/>
+    <table id="12" parent="2" name="user"/>
+    <table id="13" parent="2" name="word"/>
+    <table id="14" parent="2" name="word_group"/>
+    <table id="15" parent="2" name="word_has_group"/>
+    <column id="16" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="17" parent="12" name="name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="12" name="password">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="19" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id
+name</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="20" parent="13" name="word">
+      <Position>1</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="13" name="explains">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="13" name="us-phonetic">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="23" parent="13" name="phonetic">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="24" parent="13" name="uk-phonetic">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="25" parent="13" name="text">
+      <Position>6</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <index id="26" parent="13" name="word_UNIQUE">
+      <ColNames>word</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="27" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>word</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="28" parent="13" name="word_UNIQUE">
+      <ColNames>word</ColNames>
+      <UnderlyingIndexName>word_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="29" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="14" name="name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="14" name="user_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="14" name="user_name">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="14" name="count">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="34" parent="14" name="fk_word_group_user_idx">
+      <ColNames>user_id
+user_name</ColNames>
+    </index>
+    <key id="35" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="36" parent="14" name="fk_word_group_user">
+      <ColNames>user_id
+user_name</ColNames>
+      <RefSchemaName>db_got_word</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id
+name</RefColNames>
+    </foreign-key>
+    <column id="37" parent="15" name="word_word">
+      <Position>1</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="15" name="word_group_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="39" parent="15" name="fk_word_has_word_group_word1_idx">
+      <ColNames>word_word</ColNames>
+    </index>
+    <index id="40" parent="15" name="fk_word_has_word_group_word_group1_idx">
+      <ColNames>word_group_id</ColNames>
+    </index>
+    <key id="41" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>word_word
+word_group_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="42" parent="15" name="fk_word_has_word_group_word1">
+      <ColNames>word_word</ColNames>
+      <RefSchemaName>db_got_word</RefSchemaName>
+      <RefTableName>word</RefTableName>
+      <RefColNames>word</RefColNames>
+    </foreign-key>
+    <foreign-key id="43" parent="15" name="fk_word_has_word_group_word_group1">
+      <ColNames>word_group_id</ColNames>
+      <RefSchemaName>db_got_word</RefSchemaName>
+      <RefTableName>word_group</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

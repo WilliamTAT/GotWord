@@ -10,7 +10,7 @@ require '../util/mysql.php';
 
 /**
  * @param $word_group_id
- * @return mixed 结果数组
+ * @return mixed 单词结果数组
  */
 function selectByWordGroupId($word_group_id) {
     $conn = getConn();
@@ -20,7 +20,7 @@ function selectByWordGroupId($word_group_id) {
     }
 
 
-    $mysqli_result = mysqli_query($conn, "select * from word_group where id = '$word_group_id' ");
+    $mysqli_result = mysqli_query($conn, "select word_word from word_has_group where id = '$word_group_id' ");
 //    $mysqli_result = $conn -> query("select * from word_group where word_group_id = '$word_group_id'");
     if ($mysqli_result) {
         $array = array();
