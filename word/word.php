@@ -29,7 +29,7 @@ function insertWordToGroup($word, $group) {
         die('不能连接Mysql');
     }
 
-    $mysqli_result = mysqli_query($conn, "insert into word_has_group(word_word, word_group_id) VALUES ('$word', '$group')");
+    $mysqli_result = mysqli_query($conn, "insert into word_has_group(word_word, word_group_id) VALUES ('$word', (select id from db_got_word.group where name = '$group'))");
     if (!$mysqli_result) {
         echo '插入'.$word.' to '.$group.' 失败<br>';
     }
@@ -52,10 +52,15 @@ function selectWord($word) {
     return $mysqli_fetch_row;
 }
 
-$group = $_POST['group'].'<br>';
-$word = $_POST['word'].'<br>';
-$explains = $_POST['explains'].'<br>';
-$text = $_POST['text'].'<br>';
+$group = $_POST['group'] ;
+echo '<br>';
+$word = $_POST['word'];
+echo '<br>';
+$explains = $_POST['explains'];
+echo '<br>';
+$text = $_POST['text'];
+echo '<br>';
+
 
 echo '$group: '.$group;
 echo '$word: '.$word;
