@@ -19,10 +19,9 @@ function selectByUserId($user_id) {
         die('不能连接Mysql');
     }
     
-    $mysqli_result = mysqli_query($conn, "select word from word where word = 
-	any(select word from word_has_group where word_group_id = 
-		any(select id from word_group where user_id = '1')
-	);");
+    $mysqli_result = mysqli_query($conn, "select word_word from word_has_group 
+            where word_group_id = 
+    		any(select id from word_group where user_id = '$user_id');");
 //    $mysqli_result = $conn -> query("select * from word_group where word_group_id = '$user_id'");
     if ($mysqli_result) {
         $array = mysqli_fetch_array($mysqli_result, MYSQLI_ASSOC);
