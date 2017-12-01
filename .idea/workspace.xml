@@ -51,11 +51,11 @@
       <file leaf-file-name="selectByUser.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/group/selectByUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+            <state relative-caret-position="228">
+              <caret line="23" column="121" lean-forward="false" selection-start-line="23" selection-start-column="121" selection-end-line="23" selection-end-column="121" />
               <folding>
-                <marker date="1512137712607" expanded="true" signature="352:359" ph="select word_... word_has_group" />
-                <marker date="1512137712607" expanded="true" signature="352:551" ph="select word_... word_group" />
+                <marker date="1512137768515" expanded="true" signature="352:359" ph="select word_... word_has_group" />
+                <marker date="1512137768515" expanded="true" signature="352:559" ph="select word_... word_group" />
               </folding>
             </state>
           </provider>
@@ -241,7 +241,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512121353319</updated>
-      <workItem from="1512121355181" duration="16340000" />
+      <workItem from="1512121355181" duration="16396000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1512127052609</created>
@@ -324,7 +324,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16340000" />
+    <option name="totallyTimeSpent" value="16396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -464,11 +464,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/group/selectByUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        <state relative-caret-position="228">
+          <caret line="23" column="121" lean-forward="false" selection-start-line="23" selection-start-column="121" selection-end-line="23" selection-end-column="121" />
           <folding>
-            <marker date="1512137712607" expanded="true" signature="352:359" ph="select word_... word_has_group" />
-            <marker date="1512137712607" expanded="true" signature="352:551" ph="select word_... word_group" />
+            <marker date="1512137768515" expanded="true" signature="352:359" ph="select word_... word_has_group" />
+            <marker date="1512137768515" expanded="true" signature="352:559" ph="select word_... word_group" />
           </folding>
         </state>
       </provider>
