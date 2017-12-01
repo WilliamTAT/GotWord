@@ -52,10 +52,10 @@ function selectWord($word) {
     return $mysqli_fetch_row;
 }
 
-$group = $_POST['group'];
-$word = $_POST['word'];
-$explains = $_POST['explains'];
-$text = $_POST['text'];
+$group = $_POST['group'].'<br>';
+$word = $_POST['word'].'<br>';
+$explains = $_POST['explains'].'<br>';
+$text = $_POST['text'].'<br>';
 
 echo '$group: '.$group;
 echo '$word: '.$word;

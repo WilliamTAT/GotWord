@@ -12,14 +12,14 @@ function getConn() {
     return $conn;
 }
 
-$conn = getConn();
-$result = mysqli_query($conn, "select * from user");
+//$conn = getConn();
+//$result = mysqli_query($conn, "select * from user");
+//
+//while($row = mysqli_fetch_assoc($result)) {
+//    var_dump($row);
+//    echo '<br>';
+//}
 
-while($row = mysqli_fetch_assoc($result)) {
-    var_dump($row);
-    echo '<br>';
-}
-
-echo 'mysql connect success';
+echo 'mysql connect success<br><br>';
 
 ?>
