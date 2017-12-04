@@ -20,7 +20,8 @@ function selectByUserId($user_id) {
     if (!$conn) {
         die('不能连接Mysql');
     }
-    
+
+    //TODO 只能查询出一个group
     $mysqli_result = mysqli_query($conn, "select word_group.id, word_group.name, count(word_has_group.word_word) as count
 			from word_group, word_has_group 
             where user_id = '$user_id' 

@@ -16,14 +16,12 @@ function e_log($msg) {
     error_log($msg.'\n', 3, 'log.txt');
 }
 
-//$conn = getConn();
-//$result = mysqli_query($conn, "select * from user");
-//
-//while($row = mysqli_fetch_assoc($result)) {
-//    var_dump($row);
-//    echo '<br>';
-//}
+$conn = getConn();
+$result = mysqli_query($conn, "select * from user");
 
-
+while($row = mysqli_fetch_assoc($result)) {
+    var_dump($row);
+    echo '<br>';
+}
 
 ?>
