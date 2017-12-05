@@ -40,8 +40,8 @@ function selectByUserId($user_id) {
     }
 }
 
-//$user_id = $_POST['user_id'];
-$user_id = 2;
+$user_id = $_POST['user_id'];
+//$user_id = 2;
 
 e_log('user_id: '.$user_id.'<br>');
 
