@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33427692-08fa-4b37-9e0c-565934cb223f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/user/register.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/word/insertWord.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/util/test.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/group/selectByUser.php" afterPath="$PROJECT_DIR$/group/selectByUser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/login.php" afterPath="$PROJECT_DIR$/user/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util/mysql.php" afterPath="$PROJECT_DIR$/util/mysql.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word/selectByGroup.php" afterPath="$PROJECT_DIR$/word/selectByGroup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word/word.php" afterPath="$PROJECT_DIR$/word/word.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word/insertWord.php" afterPath="$PROJECT_DIR$/word/insertWord.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,151 +24,21 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="mysql.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/util/mysql.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="96">
-                  <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-                  <folding>
-                    <marker date="1512461438575" expanded="true" signature="396:414" ph="select * fro... user" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="selectByGroup.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/word/selectByGroup.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="672">
-                  <caret line="48" column="1" lean-forward="false" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-                  <folding>
-                    <marker date="1512461438463" expanded="true" signature="346:421" ph="select * fro... word_group" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="selectByUser.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/group/selectByUser.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="666">
-                  <caret line="53" column="1" lean-forward="false" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-                  <folding>
-                    <marker date="1512461438344" expanded="true" signature="372:379" ph="select word_... word_has_group" />
-                    <marker date="1512461438344" expanded="true" signature="372:579" ph="select word_... word_group" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="word.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/word/word.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1848">
-                  <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-                  <folding>
-                    <marker date="1512461438391" expanded="true" signature="312:388" ph="insert into word... " />
-                    <marker date="1512461438391" expanded="true" signature="657:804" ph="insert into word_has_word_group... " />
-                    <marker date="1512461438391" expanded="true" signature="738:802" ph="select id fr... word_group" />
-                    <marker date="1512461438391" expanded="true" signature="1069:1108" ph="select * fro... word" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="insertWord.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/word/insertWord.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-                  <folding>
-                    <marker date="1512462124013" expanded="true" signature="220:296" ph="insert into word... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="readme_dev.md" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/readme_dev.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="48">
-                    <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-                    <folding />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/user/login.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="384">
-                  <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-                  <folding>
-                    <marker date="1512461438287" expanded="true" signature="301:308" ph="select * fro... " />
-                    <marker date="1512461438287" expanded="true" signature="301:351" ph="select passw... user" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/user/register.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="576">
-                  <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-                  <folding>
-                    <marker date="1512461438516" expanded="true" signature="455:501" ph="select name user" />
-                    <marker date="1512461438516" expanded="true" signature="696:761" ph="insert into user... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="mysqli.php" pinned="false" current-in-tab="false">
-            <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
-                  <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="php.ini" pinned="false" current-in-tab="false">
-            <entry file="file://D:/Dev/PHP/php-5.6.31-Win32-VC11-x64/php.ini">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="29376">
-                  <caret line="1224" column="21" lean-forward="false" selection-start-line="1224" selection-start-column="21" selection-end-line="1224" selection-end-column="21" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="insertWord.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/word/insertWord.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="264">
-                  <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-                  <folding>
-                    <marker date="1512462124013" expanded="true" signature="220:296" ph="insert into word... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="insertWord.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/word/insertWord.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+              <folding>
+                <marker date="1512463509740" expanded="true" signature="260:336" ph="insert into word... " />
+                <marker date="1512463509740" expanded="true" signature="417:478" ph="insert into word_has_group... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -349,7 +211,7 @@
       <updated>1512121353319</updated>
       <workItem from="1512121355181" duration="16507000" />
       <workItem from="1512178273385" duration="3069000" />
-      <workItem from="1512457666805" duration="4394000" />
+      <workItem from="1512457666805" duration="5579000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1512127052609</created>
@@ -428,11 +290,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512136296291</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update">
+      <created>1512462342030</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1512462342030</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23970000" />
+    <option name="totallyTimeSpent" value="25155000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,19 +485,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../GotWord_Web/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="2" lean-forward="true" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding>
+            <marker date="1512461438287" expanded="true" signature="301:308" ph="select * fro... " />
+            <marker date="1512461438287" expanded="true" signature="301:351" ph="select passw... user" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -640,6 +523,19 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/word/word.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1848">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding>
+            <marker date="1512461438391" expanded="true" signature="312:388" ph="insert into word... " />
+            <marker date="1512461438391" expanded="true" signature="657:804" ph="insert into word_has_word_group... " />
+            <marker date="1512461438391" expanded="true" signature="738:802" ph="select id fr... word_group" />
+            <marker date="1512461438391" expanded="true" signature="1069:1108" ph="select * fro... word" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -664,15 +560,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/word/word.php">
+    <entry file="file://$PROJECT_DIR$/util/mysql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="96">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding>
-            <marker date="1512461438391" expanded="true" signature="312:388" ph="insert into word... " />
-            <marker date="1512461438391" expanded="true" signature="657:804" ph="insert into word_has_word_group... " />
-            <marker date="1512461438391" expanded="true" signature="738:802" ph="select id fr... word_group" />
-            <marker date="1512461438391" expanded="true" signature="1069:1108" ph="select * fro... word" />
+            <marker date="1512461438575" expanded="true" signature="396:414" ph="select * fro... user" />
           </folding>
         </state>
       </provider>
@@ -688,33 +581,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/mysql.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <marker date="1512461438575" expanded="true" signature="396:414" ph="select * fro... user" />
-          </folding>
+        <state relative-caret-position="24">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/word/insertWord.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="192">
+          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
           <folding>
-            <marker date="1512462124013" expanded="true" signature="220:296" ph="insert into word... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-          <folding>
-            <marker date="1512461438287" expanded="true" signature="301:308" ph="select * fro... " />
-            <marker date="1512461438287" expanded="true" signature="301:351" ph="select passw... user" />
+            <marker date="1512463509740" expanded="true" signature="260:336" ph="insert into word... " />
+            <marker date="1512463509740" expanded="true" signature="417:478" ph="insert into word_has_group... " />
           </folding>
         </state>
       </provider>
