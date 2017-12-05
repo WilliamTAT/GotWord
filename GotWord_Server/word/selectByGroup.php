@@ -24,7 +24,7 @@ function selectByWordGroupId($word_group_id) {
 //    $mysqli_result = $conn -> query("select * from word_group where word_group_id = '$word_group_id'");
     if ($mysqli_result) {
         $array = array();
-        while($row = mysqli_fetch_row($mysqli_result)) {
+        while($row = mysqli_fetch_array($mysqli_result)) {
             $array[] = $row;
         }
         $GLOBALS['response']['length'] = count($array);

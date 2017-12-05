@@ -21,7 +21,6 @@ function selectByUserId($user_id) {
         die('不能连接Mysql');
     }
 
-    //TODO 只能查询出一个group
     $mysqli_result = mysqli_query($conn, "select word_group.id, word_group.name, count(word_has_group.word_word) as count
 			from word_group, word_has_group 
             where user_id = '$user_id' 
@@ -41,7 +40,9 @@ function selectByUserId($user_id) {
     }
 }
 
-$user_id = $_POST['user_id'];
+//$user_id = $_POST['user_id'];
+$user_id = 2;
+
 e_log('user_id: '.$user_id.'<br>');
 
 if ($user_id) {
@@ -49,9 +50,6 @@ if ($user_id) {
     $response['data'] = $result;
 }
 
-if ($conn) {
-    mysqli_close($conn);
-}
 echo json_encode($response);
 
 ?>
