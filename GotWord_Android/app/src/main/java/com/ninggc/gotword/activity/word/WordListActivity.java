@@ -50,7 +50,7 @@ public class WordListActivity extends BaseActivity {
     protected void initData() {
         super.initData();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new WordListAdapter(null);
+        adapter = new WordListAdapter(this, null);
         recyclerView.setAdapter(adapter);
         syncList();
     }

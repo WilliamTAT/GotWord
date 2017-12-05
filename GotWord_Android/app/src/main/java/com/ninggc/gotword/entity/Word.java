@@ -1,10 +1,13 @@
 package com.ninggc.gotword.entity;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Ning on 12/5/2017 0005.
  */
 
 public class Word {
+    @SerializedName("word_word")
     private String word;
     private String explains;
 

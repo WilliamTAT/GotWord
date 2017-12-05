@@ -1,5 +1,8 @@
 package com.ninggc.gotword.activity.word;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,9 +20,11 @@ import java.util.List;
  */
 
 public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.ViewHolder> {
+    Context context;
     List<Word> words;
 
-    public WordListAdapter(List<Word> words) {
+    public WordListAdapter(Context context, List<Word> words) {
+        this.context = context;
         if (words == null) {
             this.words = new ArrayList<>();
         } else {
@@ -34,8 +39,15 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.tv_word_name.setText(words.get(position).getWord());
+        holder.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ClipboardManager cm = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+                cm.setPrimaryClip(ClipData.newPlainText("word", words.get(position).getWord()));
+            }
+        });
     }
 
     @Override
@@ -58,11 +70,13 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.ViewHo
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
+        View view;
         TextView tv_word_name;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
+            this.view = itemView;
             tv_word_name = (TextView) itemView.findViewById(R.id.item_tv_word_name);
         }
     }
