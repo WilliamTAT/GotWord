@@ -44,6 +44,9 @@ if ($word_group_id) {
     $response['data'] = $result;
 }
 
+if ($conn) {
+    mysqli_close($conn);
+}
 echo json_encode($response);
 
 ?>

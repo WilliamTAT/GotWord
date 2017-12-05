@@ -7,7 +7,7 @@
  */
 
 require '../util/mysql.php';
-
+$response = array();
 
 function insertWord($word, $explains, $all = '') {
     $conn = getConn();
@@ -22,7 +22,7 @@ function insertWord($word, $explains, $all = '') {
     mysqli_close($conn);
 }
 
-function insertWordToword_group($word, $word_group) {
+function insertWordToWordGroup($word, $word_group) {
     $conn = getConn();
 
     if (!$conn) {
@@ -68,13 +68,17 @@ echo '$text: '.$text;
 echo '<br>';
 
 if ($word) {
-    if (!selectWord($word)) {
+    $selectWord = selectWord($word);
+    if (!$selectWord) {
+        $response['at']['message'] = '添加新单词';
         insertWord($word, $explains, $text);
+    } else {
+        $response['data']['word'] = $selectWord;
     }
     if ($word_group) {
-        insertWordToword_group($word, $word_group);
+        insertWordToWordGroup($word, $word_group);
     }
 }
 
-echo 'Finish';
+echo json_encode($response);
 ?>
