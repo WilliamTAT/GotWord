@@ -1,5 +1,6 @@
 package com.ninggc.gotword.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,12 +15,14 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import com.ninggc.gotword.R;
+import com.ninggc.gotword.activity.user.LoginActivity;
 import com.ninggc.gotword.entity.Group;
 import com.ninggc.gotword.util.CallServer;
 import com.ninggc.gotword.util.Constant;
@@ -41,6 +44,7 @@ public class MainActivity extends BaseActivity
     List<Group> groups;
     RecyclerView recyclerView;
     GroupListAdapter adapter;
+    private LinearLayout layout_user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,6 +133,9 @@ public class MainActivity extends BaseActivity
     protected void initView() {
         super.initView();
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+
+        NavigationView view = (NavigationView) findViewById(R.id.nav_view);
+        layout_user = (LinearLayout) view.getHeaderView(0).findViewById(R.id.layout_user);
     }
 
     @Override
@@ -137,10 +144,20 @@ public class MainActivity extends BaseActivity
         adapter = new GroupListAdapter(this, groups);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-        syncList();
+        syncList("test");
+        layout_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivityForResult(new Intent(MainActivity.this, LoginActivity.class), Constant.CODE_LOGIN);
+            }
+        });
     }
 
-    private void syncList() {
+    private void syncList(String user_id) {
+        if (user_id == null || "".equals(user_id)) {
+            return;
+        }
+
         Request<String> request = NoHttp.createStringRequest(Constant.url + "group/selectByUser.php", RequestMethod.POST);
         request.set("user_id", "1");
         CallServer.getInstance().add(0, request, new SimpleResponseListener() {
@@ -167,5 +184,22 @@ public class MainActivity extends BaseActivity
                 Log.e("NOHTTP", "onFinish: " + gson.toJson(adapter.groups));
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode != RESULT_OK) {
+            return;
+        }
+
+        switch (requestCode) {
+            case Constant.CODE_LOGIN:
+                String user_id = data.getStringExtra("username");
+                syncList(user_id);
+                break;
+            default:
+                break;
+        }
     }
 }

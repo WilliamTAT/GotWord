@@ -6,4 +6,6 @@ package com.ninggc.gotword.util;
 
 public class Constant {
     public static String url = "http://ninggc.cn/GotWord/GotWord_Server/";
+
+    public static final byte CODE_LOGIN = 1;
 }

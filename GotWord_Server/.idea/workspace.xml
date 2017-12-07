@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="33427692-08fa-4b37-9e0c-565934cb223f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/group/selectByUser.php" afterPath="$PROJECT_DIR$/group/selectByUser.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -250,7 +249,7 @@
       <workItem from="1512121355181" duration="16507000" />
       <workItem from="1512178273385" duration="3069000" />
       <workItem from="1512457666805" duration="7532000" />
-      <workItem from="1512472868287" duration="1901000" />
+      <workItem from="1512472868287" duration="2498000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1512127052609</created>
@@ -354,7 +353,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29009000" />
+    <option name="totallyTimeSpent" value="29606000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
