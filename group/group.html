@@ -29,26 +29,21 @@
     </div>
 
     <div class="jumbotron">
-        <form action="createGroup.php">
-            <div class="form-group">
-                <label>暂不可用</label>
+        <div class="row">
+            <label>在这里输入单词，用空格隔开，然后Format即可自动填充到下面的表单中</label>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                    <input class="form-control" id="input_str">
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <input class="btn btn-primary" type="button" value="Format" onclick="strToJson()">
+                </div>
             </div>
-            <div class="form-group">
-                <input class="form-control" name="username" placeholder="username">
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="password" name="password" placeholder="password">
-            </div>
-            <div class="form-group">
-                <input class="form-control" name="group_name" placeholder="group_name">
-            </div>
-            <div class="form-group">
-                <input class="form-control" name="words" placeholder="words">
-            </div>
-            <div class="form-group">
-                <input class="btn btn-primary" type="submit"/>
-            </div>
-        </form>
+        </div>
+
     </div>
 
     <div class="jumbotron">
@@ -66,7 +61,7 @@
                 <input class="form-control" name="group_name" placeholder="group_name">
             </div>
             <div class="form-group">
-                <input class="form-control" name="words" placeholder="words">
+                <input class="form-control" name="words" placeholder="words" id="words">
             </div>
             <div class="form-group">
                 <input class="btn btn-primary" type="submit"/>
@@ -74,7 +69,37 @@
         </form>
     </div>
 
+    <!--<div class="jumbotron">-->
+        <!--<form action="createGroup.php">-->
+            <!--<div class="form-group">-->
+                <!--<label>暂不可用</label>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<input class="form-control" name="username" placeholder="username">-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<input class="form-control" type="password" name="password" placeholder="password">-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<input class="form-control" name="group_name" placeholder="group_name">-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<input class="form-control" name="words" placeholder="words">-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<input class="btn btn-primary" type="submit"/>-->
+            <!--</div>-->
+        <!--</form>-->
+    <!--</div>-->
 </div>
+
+<script type="application/javascript">
+    function strToJson() {
+        var str = document.getElementById("input_str").value;
+        var arr = str.split(" ");
+        document.getElementById("words").value = JSON.stringify(arr);
+    }
+</script>
 
 </body>
 </html>
