@@ -6,49 +6,17 @@
  * Time: 7:33 PM
  */
 
-require '../util/mysql.php';
-
-$response = array();
-
-/**
- * @param $user_id
- * @return mixed 结果数组
- */
-function selectByUserId($user_id) {
-    $conn = getConn();
-
-    if (!$conn) {
-        die('不能连接Mysql');
-    }
-
-    $mysqli_result = mysqli_query($conn, "select word_group.id, word_group.name, count(word_has_group.word_word) as count
-			from word_group, word_has_group 
-            where user_id = '$user_id' 
-			and word_has_group.word_group_id = word_group.id
-			group by word_has_group.word_group_id;
-    ");
-
-    if ($mysqli_result) {
-        $array = array();
-        while($row = mysqli_fetch_assoc($mysqli_result)) {
-            $array[] = $row;
-        }
-        $GLOBALS['response']['length'] = count($array);
-        mysqli_close($conn);
-        return $array;
-    } else {
-        $GLOBALS['response']['error'] = mysqli_error($conn);
-    }
-}
+require 'groupUtil.php';
 
 //$user_id = $_POST['user_id'];
 $user_id = 1;
 
-e_log('user_id: '.$user_id.'<br>');
+//e_log('user_id: '.$user_id.'<br>');
 
 if ($user_id) {
-    $result = selectByUserId($user_id);
-    $response['data'] = $result;
+    $response = selectByUserId($user_id);
+} else {
+    $response['message'] = "请输入用户id";
 }
 
 echo json_encode($response);

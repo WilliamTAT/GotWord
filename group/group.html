@@ -29,7 +29,30 @@
     </div>
 
     <div class="jumbotron">
-        <form>
+        <form action="createGroup.php">
+            <div class="form-group">
+                <label>暂不可用</label>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="username" placeholder="username">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="password">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="group_name" placeholder="group_name">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="words" placeholder="words">
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit"/>
+            </div>
+        </form>
+    </div>
+
+    <div class="jumbotron">
+        <form action="createGroup.php" method="post">
             <div class="form-group">
                 <label>请输入单词，可以用'-'分隔开，以便快速输入</label>
             </div>
@@ -37,7 +60,10 @@
                 <input class="form-control" name="username" placeholder="username">
             </div>
             <div class="form-group">
-                <input class="form-control" type="password" name="password" placeholder="password">
+                <input class="form-control" name="user_id" placeholder="user_id">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="group_name" placeholder="group_name">
             </div>
             <div class="form-group">
                 <input class="form-control" name="words" placeholder="words">
