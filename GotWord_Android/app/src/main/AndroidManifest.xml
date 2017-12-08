@@ -23,6 +23,8 @@
 
         <activity android:name=".activity.word.WordListActivity"/>
         <activity android:name=".activity.user.LoginActivity"/>
+        <activity android:name=".activity.group.CreateGroupActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

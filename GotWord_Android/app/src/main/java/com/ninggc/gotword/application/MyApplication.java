@@ -1,7 +1,9 @@
 package com.ninggc.gotword.application;
 
 import android.app.Application;
+import android.util.Log;
 
+import com.yanzhenjie.nohttp.Logger;
 import com.yanzhenjie.nohttp.NoHttp;
 
 /**
@@ -18,5 +20,7 @@ public class MyApplication extends Application {
 
     private void initNoHttp() {
         NoHttp.initialize(this);
+        Logger.setDebug(true);
+        Logger.setTag("NOHTTP_ATUO");
     }
 }

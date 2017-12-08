@@ -57,6 +57,14 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.ViewHo
 
 
     public void addItem(Word word) {
+        for (int i = 0; i < words.size(); i++) {
+            if (words.get(i).getWord().equals(word.getWord())) {
+                words.set(i, word);
+                notifyItemChanged(i);
+                return;
+            }
+        }
+
         words.add(word);
         notifyItemChanged(words.size());
     }

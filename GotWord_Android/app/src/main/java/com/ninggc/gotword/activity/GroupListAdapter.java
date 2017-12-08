@@ -35,6 +35,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_group_list, parent, false);
         return new ViewHolder(view);
     }
@@ -43,6 +44,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final Group group = groups.get(position);
         holder.tv_group_name.setText(group.getName());
+        holder.tv_count.setText("count: " + group.getCount());
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,11 +54,24 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
     }
 
     @Override
+    public int getItemViewType(int position) {
+        return super.getItemViewType(position);
+    }
+
+    @Override
     public int getItemCount() {
         return groups.size();
     }
 
     public void addItem(Group group) {
+        for (int i = 0; i < groups.size(); i++) {
+            if (groups.get(i).getId() == group.getId()) {
+                groups.set(i, group);
+                notifyItemChanged(i);
+                return;
+            }
+        }
+
         groups.add(group);
         notifyItemChanged(groups.size());
     }
@@ -71,11 +86,13 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
 
         View view;
         TextView tv_group_name;
+        TextView tv_count;
 
         public ViewHolder(View itemView) {
             super(itemView);
             this.view = itemView;
             tv_group_name = (TextView) itemView.findViewById(R.id.item_tv_group_name);
+            tv_count = (TextView) itemView.findViewById(R.id.item_tv_count);
         }
     }
 }

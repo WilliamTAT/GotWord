@@ -7,6 +7,7 @@ package com.ninggc.gotword.entity;
 public class Group {
     private int id;
     private String name;
+    private int count;
 
     public int getId() {
         return id;
@@ -22,6 +23,14 @@ public class Group {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 
     @Override

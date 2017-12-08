@@ -26,7 +26,7 @@ function createGroup($user_id, $username, $group_name, $words = array()) {
                 $GLOBALS['response']['test'] = $words;
                 $result_array[] = mysqli_query($conn, "insert into word(word) VALUES ('$word')");
                 $GLOBALS['response']['word'][$word] = mysqli_error($conn);
-                $result_array[] = mysqli_query($conn, "insert into word_has_group(word_word, word_group_id) VALUES ($word, $group_id)");
+                $result_array[] = mysqli_query($conn, "insert into word_has_group(word_word, word_group_id) VALUES ('$word', '$group_id')");
                 $GLOBALS['response']['word'][$word.'1'] = mysqli_error($conn);
             }
             mysqli_commit($conn);

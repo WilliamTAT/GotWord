@@ -3,6 +3,7 @@ package com.ninggc.gotword.activity.word;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -33,10 +34,11 @@ import java.util.List;
 public class WordListActivity extends BaseActivity {
     RecyclerView recyclerView;
     WordListAdapter adapter;
+    SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
-        setContentView(R.layout.content_main);
+        setContentView(R.layout.layout_recyclerview);
         super.onCreate(savedInstanceState);
     }
 
@@ -44,6 +46,13 @@ public class WordListActivity extends BaseActivity {
     protected void initView() {
         super.initView();
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                syncList();
+            }
+        });
     }
 
     @Override
@@ -56,6 +65,10 @@ public class WordListActivity extends BaseActivity {
     }
 
     private void syncList() {
+        if(!swipeRefreshLayout.isRefreshing()) {
+            swipeRefreshLayout.setRefreshing(true);
+        }
+
         Request<String> request = NoHttp.createStringRequest(Constant.url + "word/selectByGroup.php", RequestMethod.POST);
         request.set("word_group_id", String.valueOf(getIntent().getIntExtra("id", 0)));
         CallServer.getInstance().add(0, request, new SimpleResponseListener() {
@@ -80,6 +93,7 @@ public class WordListActivity extends BaseActivity {
             @Override
             public void onFinish(int what) {
                 Log.e("NOHTTP", "onFinish: " + gson.toJson(adapter.words));
+                swipeRefreshLayout.setRefreshing(false);
             }
         });
     }

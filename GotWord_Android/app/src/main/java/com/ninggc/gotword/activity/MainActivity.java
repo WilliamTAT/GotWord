@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -15,6 +16,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -22,6 +24,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import com.ninggc.gotword.R;
+import com.ninggc.gotword.activity.group.CreateGroupActivity;
 import com.ninggc.gotword.activity.user.LoginActivity;
 import com.ninggc.gotword.entity.Group;
 import com.ninggc.gotword.util.CallServer;
@@ -44,7 +47,11 @@ public class MainActivity extends BaseActivity
     List<Group> groups;
     RecyclerView recyclerView;
     GroupListAdapter adapter;
-    private LinearLayout layout_user;
+    LinearLayout layout_user;
+    LinearLayout linearLayout;
+    SwipeRefreshLayout swipeRefreshLayout;
+    // FIXME: 12/8/2017 0008 登录模块待添加
+    private String user_id = "test";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +64,9 @@ public class MainActivity extends BaseActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                startActivity(new Intent(MainActivity.this, CreateGroupActivity.class));
             }
         });
 
@@ -133,9 +141,16 @@ public class MainActivity extends BaseActivity
     protected void initView() {
         super.initView();
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-
         NavigationView view = (NavigationView) findViewById(R.id.nav_view);
         layout_user = (LinearLayout) view.getHeaderView(0).findViewById(R.id.layout_user);
+        linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
+        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                syncList(user_id);
+            }
+        });
     }
 
     @Override
@@ -154,13 +169,22 @@ public class MainActivity extends BaseActivity
     }
 
     private void syncList(String user_id) {
+        if(!swipeRefreshLayout.isRefreshing()) {
+            swipeRefreshLayout.setRefreshing(true);
+        }
+
         if (user_id == null || "".equals(user_id)) {
+            swipeRefreshLayout.setRefreshing(false);
             return;
         }
 
         Request<String> request = NoHttp.createStringRequest(Constant.url + "group/selectByUser.php", RequestMethod.POST);
         request.set("user_id", "1");
         CallServer.getInstance().add(0, request, new SimpleResponseListener() {
+            @Override
+            public void onStart(int what) {
+                super.onStart(what);
+            }
 
             @Override
             public void onSucceed(int what, Response response) {
@@ -182,6 +206,7 @@ public class MainActivity extends BaseActivity
             @Override
             public void onFinish(int what) {
                 Log.e("NOHTTP", "onFinish: " + gson.toJson(adapter.groups));
+                swipeRefreshLayout.setRefreshing(false);
             }
         });
     }
