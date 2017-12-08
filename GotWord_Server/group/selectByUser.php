@@ -24,7 +24,8 @@ function selectByUserId($user_id) {
     $mysqli_result = mysqli_query($conn, "select word_group.id, word_group.name, count(word_has_group.word_word) as count
 			from word_group, word_has_group 
             where user_id = '$user_id' 
-			and word_has_group.word_group_id = word_group.id;
+			and word_has_group.word_group_id = word_group.id
+			group by word_has_group.word_group_id;
     ");
 
     if ($mysqli_result) {
@@ -40,8 +41,8 @@ function selectByUserId($user_id) {
     }
 }
 
-$user_id = $_POST['user_id'];
-//$user_id = 2;
+//$user_id = $_POST['user_id'];
+$user_id = 1;
 
 e_log('user_id: '.$user_id.'<br>');
 

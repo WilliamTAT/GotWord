@@ -18,13 +18,29 @@ function createGroup($user_id, $username, $group_name, $words = array()) {
         $GLOBALS['response']['message'] = mysqli_error($conn);
     } else {
         $GLOBALS['response']['result'] = 1;
-        $GLOBALS['response']['group_id'] = mysqli_insert_id($conn);
+        $group_id = mysqli_insert_id($conn);
         if ($words != null) {
-            mysqli_query($conn, "");
             mysqli_autocommit($conn, false);
+            $result_array = array();
             foreach ($words as $word) {
-                mysqli_query($conn, "insert into word_has_group(word_word, word_group_id) VALUES ($word, group)");
-                mysqli_rollback($conn);
+                $GLOBALS['response']['test'] = $words;
+                $result_array[] = mysqli_query($conn, "insert into word(word) VALUES ('$word')");
+                $GLOBALS['response']['word'][$word] = mysqli_error($conn);
+                $result_array[] = mysqli_query($conn, "insert into word_has_group(word_word, word_group_id) VALUES ($word, $group_id)");
+                $GLOBALS['response']['word'][$word.'1'] = mysqli_error($conn);
+            }
+            mysqli_commit($conn);
+            if (count($result_array) != 0) {
+                foreach ($result_array as $result) {
+                    if (!$result) {
+                        mysqli_rollback($conn);
+                        $GLOBALS['response']['result'] = -1;
+                        $GLOBALS['response']['error'] = mysqli_error($conn);
+                        $GLOBALS['response']['message'] = "插入单词失败";
+                    } else {
+                        $GLOBALS['response']['result'] = 1;
+                    }
+                }
             }
         }
     }
@@ -37,7 +53,11 @@ function createGroup($user_id, $username, $group_name, $words = array()) {
 $user_id = $_POST['user_id'];
 $username = $_POST['username'];
 $group_name = $_POST['group_name'];
-$words = $_POST['words'] or die (null);
+$words = $_POST['words'];
+//$user_id = 1;
+//$username = "ninggc";
+//$group_name = "test";
+//$words = null;
 
 //createGroup(1, "ninggc", "test", null) ;
 if ($group_name) {
@@ -45,6 +65,7 @@ if ($group_name) {
 } else {
     $response['message'] = "请输入组名";
 }
+
 echo json_encode($response);
 
 ?>
