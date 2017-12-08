@@ -16,10 +16,10 @@
 
         while($row = mysqli_fetch_array($mysqli_result)) {
             if ($row['password'] == $password) {
-                $response['result'] = 'true';
+                $response['result'] = 1;
                 $response['data'] = time();
             } else {
-                $response['result'] = 'false';
+                $response['result'] = 0;
                 $response['error'] = $row;
             }
         }
