@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33427692-08fa-4b37-9e0c-565934cb223f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/java/com/ninggc/gotword/activity/group/CreateGroupActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/res/layout/activity_create_group.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/res/layout/item_button.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/res/layout/layout_recyclerview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GotWord_Android/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GotWord_Android/app/src/main/java/com/ninggc/gotword/activity/GroupListAdapter.java" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/java/com/ninggc/gotword/activity/GroupListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GotWord_Android/app/src/main/java/com/ninggc/gotword/activity/MainActivity.java" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/java/com/ninggc/gotword/activity/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GotWord_Android/app/src/main/java/com/ninggc/gotword/activity/word/WordListActivity.java" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/java/com/ninggc/gotword/activity/word/WordListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GotWord_Android/app/src/main/java/com/ninggc/gotword/activity/word/WordListAdapter.java" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/java/com/ninggc/gotword/activity/word/WordListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GotWord_Android/app/src/main/java/com/ninggc/gotword/application/MyApplication.java" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/java/com/ninggc/gotword/application/MyApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GotWord_Android/app/src/main/java/com/ninggc/gotword/entity/Group.java" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/java/com/ninggc/gotword/entity/Group.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GotWord_Android/app/src/main/res/layout/app_bar_main.xml" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/res/layout/app_bar_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GotWord_Android/app/src/main/res/layout/content_main.xml" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/res/layout/content_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GotWord_Android/app/src/main/res/layout/item_group_list.xml" afterPath="$PROJECT_DIR$/../GotWord_Android/app/src/main/res/layout/item_group_list.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/group/createGroup.php" afterPath="$PROJECT_DIR$/group/createGroup.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -82,8 +67,8 @@
       <file leaf-file-name="createGroup.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/group/createGroup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="65" column="35" lean-forward="true" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+            <state relative-caret-position="624">
+              <caret line="37" column="76" lean-forward="true" selection-start-line="37" selection-start-column="76" selection-end-line="37" selection-end-column="76" />
               <folding>
                 <marker date="1512718178654" expanded="true" signature="266:362" ph="insert into word_group... " />
                 <marker date="1512718178654" expanded="true" signature="866:905" ph="insert into word... " />
@@ -295,7 +280,7 @@
       <workItem from="1512178273385" duration="3069000" />
       <workItem from="1512457666805" duration="7532000" />
       <workItem from="1512472868287" duration="2498000" />
-      <workItem from="1512699824716" duration="12483000" />
+      <workItem from="1512699824716" duration="12657000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1512127052609</created>
@@ -423,11 +408,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512717454242</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update">
+      <created>1512725353544</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1512725353544</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42089000" />
+    <option name="totallyTimeSpent" value="42263000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -810,8 +802,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/group/createGroup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="65" column="35" lean-forward="true" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+        <state relative-caret-position="624">
+          <caret line="37" column="76" lean-forward="true" selection-start-line="37" selection-start-column="76" selection-end-line="37" selection-end-column="76" />
           <folding>
             <marker date="1512718178654" expanded="true" signature="266:362" ph="insert into word_group... " />
             <marker date="1512718178654" expanded="true" signature="866:905" ph="insert into word... " />
