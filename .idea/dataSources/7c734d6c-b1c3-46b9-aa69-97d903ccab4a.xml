@@ -57,7 +57,7 @@ name</ColNames>
     </column>
     <column id="23" parent="13" name="phonetic">
       <Position>4</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(100)|0</DataType>
     </column>
     <column id="24" parent="13" name="uk-phonetic">
       <Position>5</Position>
@@ -101,10 +101,9 @@ name</ColNames>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="33" parent="14" name="count">
+    <column id="33" parent="14" name="note">
       <Position>5</Position>
-      <DataType>int(11)|0</DataType>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <DataType>text|0</DataType>
     </column>
     <index id="34" parent="14" name="fk_word_group_user_idx">
       <ColNames>user_id
@@ -122,6 +121,8 @@ user_name</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id
 name</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="37" parent="15" name="word_word">
       <Position>1</Position>
@@ -150,12 +151,16 @@ word_group_id</ColNames>
       <RefSchemaName>db_got_word</RefSchemaName>
       <RefTableName>word</RefTableName>
       <RefColNames>word</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="43" parent="15" name="fk_word_has_word_group_word_group1">
       <ColNames>word_group_id</ColNames>
       <RefSchemaName>db_got_word</RefSchemaName>
       <RefTableName>word_group</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
   </database-model>
 </dataSource>
