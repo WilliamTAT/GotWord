@@ -8,6 +8,7 @@ public class Group {
     private int id;
     private String name;
     private int count;
+    private String note;
 
     public int getId() {
         return id;
@@ -33,27 +34,33 @@ public class Group {
         this.count = count;
     }
 
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
         Group group = (Group) o;
 
-        if (id != group.id) {
-            return false;
-        }
-        return name != null ? name.equals(group.name) : group.name == null;
+        if (id != group.id) return false;
+        if (count != group.count) return false;
+        if (name != null ? !name.equals(group.name) : group.name != null) return false;
+        return note != null ? note.equals(group.note) : group.note == null;
     }
 
     @Override
     public int hashCode() {
         int result = id;
         result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + count;
+        result = 31 * result + (note != null ? note.hashCode() : 0);
         return result;
     }
 }

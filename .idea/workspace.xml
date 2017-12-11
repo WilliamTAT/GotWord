@@ -24,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="group.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="group.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/group/group.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+            <state relative-caret-position="402">
+              <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -44,16 +44,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="groupUtil.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="groupUtil.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/group/groupUtil.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="55" column="3" lean-forward="false" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
+            <state relative-caret-position="408">
+              <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
               <folding>
-                <marker date="1512732884440" expanded="true" signature="290:386" ph="insert into word_group... " />
-                <marker date="1512732884440" expanded="true" signature="802:841" ph="insert into word... " />
-                <marker date="1512732884440" expanded="true" signature="985:1067" ph="insert into word_has_group... " />
-                <marker date="1512732884440" expanded="true" signature="1936:2184" ph="select word_... word_group" />
+                <marker date="1512741168357" expanded="true" signature="290:386" ph="insert into word_group... " />
+                <marker date="1512741168357" expanded="true" signature="802:841" ph="insert into word... " />
+                <marker date="1512741168357" expanded="true" signature="986:1068" ph="insert into word_has_group... " />
+                <marker date="1512741168357" expanded="true" signature="1938:2186" ph="select word_... word_group" />
               </folding>
             </state>
           </provider>
@@ -117,8 +117,8 @@
         <option value="$PROJECT_DIR$/README_DEV.md" />
         <option value="$PROJECT_DIR$/group/createGroup.php" />
         <option value="$PROJECT_DIR$/group/selectByUser.php" />
-        <option value="$PROJECT_DIR$/group/groupUtil.php" />
         <option value="$PROJECT_DIR$/group/group.html" />
+        <option value="$PROJECT_DIR$/group/groupUtil.php" />
       </list>
     </option>
   </component>
@@ -145,7 +145,7 @@
       <path value="D:\Dev\package &amp; doc\HTML\bootstrap-3.3.7-dist\bootstrap-3.3.7-dist" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -257,7 +257,7 @@
       <workItem from="1512728253646" duration="819000" />
       <workItem from="1512729179739" duration="423000" />
       <workItem from="1512731124429" duration="1852000" />
-      <workItem from="1512735114621" duration="2799000" />
+      <workItem from="1512735114621" duration="3821000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1512127052609</created>
@@ -406,11 +406,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512738139560</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="backup">
+      <created>1512741173110</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1512741173110</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49042000" />
+    <option name="totallyTimeSpent" value="50064000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,7 +429,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15085287" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -770,6 +777,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/group/group.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/group/createGroup.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -780,22 +795,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/group/groupUtil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="55" column="3" lean-forward="false" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
+        <state relative-caret-position="408">
+          <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
           <folding>
-            <marker date="1512732884440" expanded="true" signature="290:386" ph="insert into word_group... " />
-            <marker date="1512732884440" expanded="true" signature="802:841" ph="insert into word... " />
-            <marker date="1512732884440" expanded="true" signature="985:1067" ph="insert into word_has_group... " />
-            <marker date="1512732884440" expanded="true" signature="1936:2184" ph="select word_... word_group" />
+            <marker date="1512741168357" expanded="true" signature="290:386" ph="insert into word_group... " />
+            <marker date="1512741168357" expanded="true" signature="802:841" ph="insert into word... " />
+            <marker date="1512741168357" expanded="true" signature="986:1068" ph="insert into word_has_group... " />
+            <marker date="1512741168357" expanded="true" signature="1938:2186" ph="select word_... word_group" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/group/group.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>

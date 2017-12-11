@@ -1,13 +1,12 @@
 package com.ninggc.gotword.activity.group;
 
-import android.app.DownloadManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.JsonObject;
@@ -23,19 +22,24 @@ import com.yanzhenjie.nohttp.rest.Response;
 import com.yanzhenjie.nohttp.rest.SimpleResponseListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Ning on 12/8/2017 0008.
  */
 
 public class CreateGroupActivity extends BaseActivity implements View.OnClickListener {
-    private TextInputLayout til_group_name;
-    private LinearLayout linearLayout;
-    private EditText et_word;
-    private Button btn_add;
-    private Button btn_finish;
-    List<EditText> editTexts = new ArrayList<>();
+    private TextInputLayout tilGroupName;
+    private EditText etInputWord;
+    private TextView tvShow;
+    private Button btnFormat;
+    private Button btnFinish;
+    Set<String> words = new HashSet<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,27 +51,26 @@ public class CreateGroupActivity extends BaseActivity implements View.OnClickLis
     protected void initView() {
         super.initView();
 
-        til_group_name = (TextInputLayout) findViewById(R.id.create_group_til_name);
-        et_word = (EditText) findViewById(R.id.create_group_et_word);
-        editTexts.add(et_word);
-        linearLayout = (LinearLayout) findViewById(R.id.linearLayout_words);
-        btn_add = (Button) findViewById(R.id.create_group_btn_add);
-        btn_finish = (Button) findViewById(R.id.create_group_btn_finish);
+        tilGroupName = (TextInputLayout) findViewById(R.id.create_group_til_name);
+        tvShow = (TextView) findViewById(R.id.create_group_tv_show);
+        etInputWord = (EditText) findViewById(R.id.create_group_et_word);
+        btnFormat = (Button) findViewById(R.id.create_group_btn_format);
+        btnFinish = (Button) findViewById(R.id.create_group_btn_finish);
     }
 
     @Override
     protected void initData() {
         super.initData();
 
-        btn_add.setOnClickListener(this);
-        btn_finish.setOnClickListener(this);
+        btnFormat.setOnClickListener(this);
+        btnFinish.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.create_group_btn_add:
-                addWordEditText();
+            case R.id.create_group_btn_format:
+                formatInputWords();
                 break;
             case R.id.create_group_btn_finish:
                 createGroup();
@@ -77,17 +80,10 @@ public class CreateGroupActivity extends BaseActivity implements View.OnClickLis
     }
 
     private void createGroup() {
-        String groupName = til_group_name.getEditText().getText().toString();
+        String groupName = tilGroupName.getEditText().getText().toString();
         if (groupName == null || "".equals(groupName)) {
             Toast.makeText(this, "请输入组名", Toast.LENGTH_SHORT).show();
-        }
-        List<String> words = new ArrayList<>();
-        for (EditText et : editTexts) {
-            String s = et.getText().toString();
-            if(s == null || "".equals(s)) {
-                continue;
-            }
-            words.add(s);
+            return;
         }
         if (words.size() == 0) {
             Toast.makeText(this, "请至少输入一个单词", Toast.LENGTH_SHORT).show();
@@ -125,9 +121,21 @@ public class CreateGroupActivity extends BaseActivity implements View.OnClickLis
         });
     }
 
-    private void addWordEditText() {
-        EditText et = new EditText(this);
-        linearLayout.addView(et);
-        editTexts.add(et);
+    private void formatInputWords() {
+        String s = etInputWord.getText().toString();
+        String[] split = s.split(" ");
+        Collections.addAll(words, split);
+        if (words.contains(" ")) {
+            words.remove(" ");
+        }
+        StringBuilder builder = new StringBuilder().append("已输入单词: \n");
+        List<String> list = new ArrayList<>(words);
+        Collections.sort(list);
+        Iterator<String> iterator = list.iterator();
+        while(iterator.hasNext()) {
+            builder.append("\"").append(iterator.next()).append("\"").append("-");
+        }
+        tvShow.setText(builder.substring(0, builder.length() - 1));
+        etInputWord.setText("");
     }
 }

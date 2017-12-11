@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_marginBottom="8dp"
     android:layout_width="match_parent"
-    android:layout_height="60dp">
+    android:layout_height="100dp">
 
     <RelativeLayout
         android:background="@drawable/anim_touch"
@@ -16,8 +16,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="19dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
             android:text="group name" />
 
         <TextView
@@ -28,5 +29,16 @@
             android:layout_alignTop="@+id/item_tv_group_name"
             android:layout_marginEnd="35dp"
             android:text="count" />
+
+        <TextView
+            android:id="@+id/item_tv_note"
+            android:text="note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/item_tv_group_name"
+            android:layout_marginStart="20dp"
+            android:layout_alignRight="@id/item_tv_count"
+            android:layout_marginTop="15dp" />
     </RelativeLayout>
 </android.support.v7.widget.CardView>

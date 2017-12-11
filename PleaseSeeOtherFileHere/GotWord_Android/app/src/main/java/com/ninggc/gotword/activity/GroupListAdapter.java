@@ -45,6 +45,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         final Group group = groups.get(position);
         holder.tv_group_name.setText(group.getName());
         holder.tv_count.setText("count: " + group.getCount());
+        holder.tv_note.setText("note: " + group.getNote());
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,6 +62,11 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
     @Override
     public int getItemCount() {
         return groups.size();
+    }
+
+    public void changeList(List<Group> groups) {
+        this.groups = groups;
+        notifyDataSetChanged();
     }
 
     public void addItem(Group group) {
@@ -87,12 +93,14 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         View view;
         TextView tv_group_name;
         TextView tv_count;
+        TextView tv_note;
 
         public ViewHolder(View itemView) {
             super(itemView);
             this.view = itemView;
             tv_group_name = (TextView) itemView.findViewById(R.id.item_tv_group_name);
             tv_count = (TextView) itemView.findViewById(R.id.item_tv_count);
+            tv_note = (TextView) itemView.findViewById(R.id.item_tv_note);
         }
     }
 }

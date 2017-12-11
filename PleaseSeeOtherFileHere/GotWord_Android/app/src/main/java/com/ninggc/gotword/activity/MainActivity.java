@@ -194,7 +194,7 @@ public class MainActivity extends BaseActivity
                     JsonObject jsonObject = new JsonParser().parse(s).getAsJsonObject();
                     String json = String.valueOf(jsonObject.get("data"));
                     List<Group> groups = gson.fromJson(json, new TypeToken<List<Group>>(){}.getType());
-                    adapter.addItem(groups);
+                    adapter.changeList(groups);
                 }
             }
 
